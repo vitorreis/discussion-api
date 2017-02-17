@@ -1,11 +1,11 @@
-package hello;
+package vitorreis.discussion.api;
 
-public class Greeting {
+public class Discussion {
 
     private final long id;
     private final String content;
 
-    public Greeting(long id, String content) {
+    public Discussion(long id, String content) {
         this.id = id;
         this.content = content;
     }
