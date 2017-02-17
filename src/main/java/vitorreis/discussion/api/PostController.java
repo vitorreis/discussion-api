@@ -30,8 +30,7 @@ public class PostController {
         return post;
     }
 
-    // todo: fix conflict with routes and remove "new" as a path
-    @RequestMapping(path = "v1/post/new", method= RequestMethod.POST)
+    @RequestMapping(path = "v1/post", method= RequestMethod.POST)
     public Post create(
         @RequestBody PostDto postDto
     )
@@ -56,6 +55,7 @@ public class PostController {
         @PathVariable("id") Long id
     )
     {
+        // todo: get child posts
         return posts.get(id);
     }
 
