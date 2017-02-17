@@ -23,6 +23,11 @@ public class PostController {
         @RequestBody PostDto postDto
     )
     {
+        // validates if parent exists
+        if (!posts.containsKey(parentId)) {
+            throw new RuntimeException("parent does not exists");
+        }
+
         Post post = new Post(counter.incrementAndGet(), Optional.of(parentId), postDto.getBody());
 
         savePost(post);
