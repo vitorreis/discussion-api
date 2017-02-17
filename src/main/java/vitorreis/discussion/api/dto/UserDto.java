@@ -1,12 +1,8 @@
 package vitorreis.discussion.api.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class UserDto {
-    @JsonProperty
     private Long id;
 
-    @JsonProperty
     private String name;
 
     public Long getId() {
